@@ -1,5 +1,5 @@
 import requests
-def get_api():
-    response = requests.get("https://jsonplaceholder.typicode.com/posts")
-    print(response.json())
-    assert response.status_code == 200
+def get_api(base_url):
+    response = requests.get(base_url  + "/posts")
+    # print(response.json())
+    return response
